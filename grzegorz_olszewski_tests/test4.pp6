@@ -1,0 +1,6 @@
+fun scalar_product(x:(int*int)*(int*int)):int = 
+	let z = fst x in let y = snd x
+	in let a = fst z in let b = snd z in let c = fst y in let d = snd y in
+	a*c + b*d 
+
+input h j k l in scalar_product((h,j),(k,l)) 

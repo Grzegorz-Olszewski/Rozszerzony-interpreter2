@@ -1,0 +1,6 @@
+fun factorial(a:int*int):int = 
+	let n = fst(a) in 
+	let acc = snd(a) in if n = 0 then acc else factorial(n-1,acc*n) 
+
+
+input x in factorial(x,1)

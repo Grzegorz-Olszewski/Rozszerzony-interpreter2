@@ -1,0 +1,20 @@
+fun map2(x:((int->int)*int list)):int list = 
+    let f = fst x in
+    match snd x with 
+        [] -> []:int list | y::ys -> f(y) :: map2(f, ys) 
+
+fun sum_aux(x:(int list * int)):int = 
+    let list2 = fst x in
+        match list2 with
+        [] -> snd x
+        | y::ys -> sum_aux(ys,(snd x)+y)
+
+fun map_and_sum(x:(int->int)*int list):int = 
+    let map_res = map2(x) in sum2(map_res)
+
+fun sum2(x:int list):int = 
+    sum_aux(x,0)
+
+
+
+input x y z in map_and_sum(fn(n:int)->n+1,[x,y,z]:int list)

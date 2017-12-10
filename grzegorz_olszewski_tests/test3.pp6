@@ -1,0 +1,5 @@
+input x in 
+	let fun1 = fn(a:int)-> a + 1 in 
+	let fun2 = fn(b:int)-> b + 2 in 
+	let fun3 = fn(c:int)-> c + 3 in
+	fun1(fun2(fun3(x))) 
